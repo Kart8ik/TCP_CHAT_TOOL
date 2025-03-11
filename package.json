@@ -1,0 +1,22 @@
+{
+    "name": "tcp-chat-electron",
+    "version": "1.0.0",
+    "description": "A TCP chat application built with Electron.js and Node.js",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "server": "node server.js"
+    },
+    "type": "module",
+    "dependencies": {
+      "electron": "^28.0.0",
+      "net": "^1.0.2"
+    },
+    "devDependencies": {
+      "electron-builder": "^24.6.0"
+    },
+    "keywords": ["electron", "TCP chat", "nodejs", "networking"],
+    "author": "Shri Karthik",
+    "license": "MIT"
+  }
+  
