@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "p2p-chat-app",
   "version": "1.0.0",
   "description": "Peer-to-peer TCP chat app with UDP discovery",
@@ -23,26 +22,3 @@
     "electron-builder": "^24.6.4"
   }
 }
-=======
-    "name": "tcp-chat-electron",
-    "version": "1.0.0",
-    "description": "A TCP chat application built with Electron.js and Node.js",
-    "main": "main.js",
-    "scripts": {
-      "start": "electron .",
-      "server": "node server.js"
-    },
-    "type": "module",
-    "dependencies": {
-      "electron": "^28.0.0",
-      "net": "^1.0.2"
-    },
-    "devDependencies": {
-      "electron-builder": "^24.6.0"
-    },
-    "keywords": ["electron", "TCP chat", "nodejs", "networking"],
-    "author": "Shri Karthik",
-    "license": "MIT"
-  }
-  
->>>>>>> 85ffe1f4e8fd2f6dbd54e12d4ff79e93cd3d5fea
