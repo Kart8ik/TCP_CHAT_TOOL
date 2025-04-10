@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>P2P Chat Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Left Panel (Chat Area) -->
+    <div class="left-panel">
+      <!-- Connection Frame -->
+      <div class="connection-frame">
+        <h3>P2P Settings</h3>
+        <div class="connection-controls">
+          <label for="nickname-entry">Your Nickname:</label>
+          <input type="text" id="nickname-entry" value="User">
+          <button id="start-btn">Start</button>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-frame">
+        <h3>Chat</h3>
+        <div id="message-display" class="message-display"></div>
+        <div class="message-frame">
+          <input type="text" id="message-entry" disabled>
+          <button id="send-btn" disabled>Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel (Peers and Statistics) -->
+    <div class="right-panel">
+      <!-- Peers List Frame -->
+      <div class="peers-frame">
+        <h3>Discovered Peers</h3>
+        <select id="peers-listbox" multiple></select>
+      </div>
+
+      <!-- Network Statistics -->
+      <div class="stats-frame">
+        <h3>Network Statistics</h3>
+        <div class="stats-container">
+          <div class="stat-row">
+            <span>Status:</span>
+            <span id="status-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>Local IP:</span>
+            <span id="local-ip-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>UDP Port:</span>
+            <span id="udp-port-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>TCP Port:</span>
+            <span id="tcp-port-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>Messages Sent:</span>
+            <span id="messages-sent-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>Messages Received:</span>
+            <span id="messages-received-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>Peers Discovered:</span>
+            <span id="peers-discovered-label">---</span>
+          </div>
+          <div class="stat-row">
+            <span>Session Duration:</span>
+            <span id="session-duration-label">---</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Educational Panel -->
+      <div class="edu-frame">
+        <h3>Network Concepts</h3>
+        <div id="edu-text" class="edu-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
