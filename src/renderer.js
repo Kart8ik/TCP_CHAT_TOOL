@@ -178,15 +178,15 @@ function displayMessage(timestamp, sender, senderIp, message) {
   } else {
     messageElement.style.alignSelf = 'flex-start';
   }
-
-  messageElement.style.backgroundColor = '#9CAA88'; 
-  messageElement.style.color = 'black'; 
-  messageElement.style.padding = '5px';
-  messageElement.style.borderRadius = '5px'; 
-  messageElement.style.marginBottom = '5px';
-  messageElement.style.minWidth = '100px';
-  messageElement.style.width = 'fit-content';
-
+  Object.assign(messageElement.style,{
+    backgroundColor:'#9CAA88',
+    color:'black',
+    padding:'5px',
+    borderRadius:'5px', 
+    marginBottom :'5px',
+    minWidth:'100px',
+    width: 'fit-content',
+  });
   messageDisplay.appendChild(messageElement);
   messageDisplay.scrollTop = messageDisplay.scrollHeight;
 }
@@ -195,15 +195,17 @@ function displayMessage(timestamp, sender, senderIp, message) {
 function displaySystemMessage(message) {
   const timestamp = new Date().toLocaleTimeString();
   const messageElement = document.createElement('div');
-  messageElement.id = `messageElement`;
-  messageElement.textContent = `${message}`;
-  messageElement.style.backgroundColor = 'grey'; 
-  messageElement.style.color = 'white'; 
-  messageElement.style.padding = '5px';
-  messageElement.style.borderRadius = '5px'; 
-  messageElement.style.marginBottom = '5px';
-  messageElement.style.width = 'fit-content'; 
-  messageElement.style.alignSelf = 'center';
+  messageElement.textContent = message;
+  Object.assign(messageElement.style, {
+    backgroundColor: 'grey',
+    color: 'white',
+    padding: '5px',
+    borderRadius: '5px',
+    marginBottom: '5px',
+    width: 'fit-content',
+    boxShadow: '0 0.2vw 0.4vw rgba(0, 0, 0, 0.4)',
+    alignSelf: 'center',
+  });
   messageDisplay.appendChild(messageElement);
   messageDisplay.scrollTop = messageDisplay.scrollHeight;
 }
